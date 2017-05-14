@@ -1,0 +1,28 @@
+// Place all the styles related to the Users controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+.user_show {
+
+	div {
+    border-radius: 25px;
+    border: 2px solid #BD1E23;
+    padding: 20px; 
+    width: 200px;
+    height: 150px; 
+    align-content: center;
+    }
+  .round-image {
+    background-color: white;
+    border: 1px solid #d9d9d9;
+    border-radius: 25px;
+    -moz-border-radius: 25px;
+    -webkit-border-radius: 25px;
+    height: 50px;
+    width: 50px;
+    overflow: hidden;
+    text-align: center;
+    img { width: 100% }
+    align-content: center;
+}
+}

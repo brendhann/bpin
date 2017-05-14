@@ -1,0 +1,226 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
+ * or vendor/assets/stylesheets of plugins, if any, can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any styles
+ * defined in the other CSS/SCSS files in this directory. It is generally better to create a new
+ * file per style scope.
+ *
+ *= require_tree .
+ *= require_self
+ */
+
+@import "bootstrap-sprockets";
+@import "bootstrap";
+@import "social-share-button";
+
+.navbar-nav {
+    float:none;
+    margin:0 auto;
+    display: block;
+    text-align: center;
+
+    background: #000;
+}
+
+.navbar-nav > li {
+  display: inline-block;
+  float:none;
+  font-size: 26px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: -1px;
+  padding: 15px 0;
+
+  a {
+    color: #2F363E;
+  }
+}
+
+#logo {
+  font-size: 26px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: -1px;
+  padding: 15px 0;
+  a {
+    color: #2F363E;
+  }
+}
+
+html body {
+    background-color: #222222;
+
+}
+
+.container {
+  
+}
+
+#main_content {
+  background: #000;
+  color: #fff;
+    display: block;
+    text-align: center;
+  #content {
+    float: none;
+    display: inline-block;
+  }
+
+  padding-bottom: 100px;
+
+  .link {
+    padding: 2em 1em;
+    border-bottom: 1px solid #e9e9e9;
+    color: #2F363E;
+    .title {
+
+      a {
+        color: #FF4500;
+      }
+    }
+  }
+  .comments_title {
+    margin-top: 2em;
+  }
+  #comments {
+    .comment {
+      padding: 1em 0;
+      border-top: 1px solid #E9E9E9;
+      .lead {
+        margin-bottom: 0;
+      }
+    }
+  }
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-weight: 100;
+}
+
+nav {
+  box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.22);
+  .navbar-brand {
+    a {
+      color: #BD1E23;
+      font-weight: bold;
+      &:hover {
+        text-decoration: none;
+      }
+    }
+  }
+}
+
+#pins {
+  margin: 0 auto;
+  width: 100%;
+  .box {
+    margin: 10px;
+    width: 350px;
+    box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.22);
+    border-radius: 7px;
+    text-align: center;
+    img {
+      max-width: 100%;
+      height: auto;
+    }
+    h2 {
+      font-size: 22px;
+      margin: 0;
+      padding: 25px 10px;
+      a {
+        color: #474747;
+      }
+    }
+    .user {
+      font-size: 12px;
+      border-top: 1px solid #EAEAEA;
+      padding: 15px;
+      margin: 0;
+    }
+  }
+}
+
+#edit_page {
+  .current_image {
+    img {
+      display: block;
+      margin: 20px 0;
+    }
+  }
+}
+
+#pin_show {
+  .panel-heading {
+    padding: 0;
+  }
+  .pin_image {
+    img {
+      max-width: 100%;
+      width: 100%;
+      display: block;
+      margin: 0 auto;
+    }
+  }
+  .panel-body {
+    padding: 35px;
+    h1 {
+      margin: 0 0 10px 0;
+    }
+    .description {
+      color: #868686;
+      line-height: 1.75;
+      margin: 0;
+    }
+  }
+  .panel-footer {
+    padding: 20px 35px;
+    p {
+      margin: 0;
+    }
+    .user {
+      padding-top: 8px;
+    }
+  }
+}
+
+textarea {
+  min-height: 250px;
+}
+
+
+h2 > a {
+  position: relative;
+  color: #fff;
+  text-decoration: none;
+}
+
+h2 > a:hover {
+  color: #fff;
+}
+
+h2 > a:before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 2px;
+  bottom: 0;
+  left: 0;
+  background-color: #fff;
+  visibility: hidden;
+  -webkit-transform: scaleX(0);
+  transform: scaleX(0);
+  -webkit-transition: all 0.3s ease-in-out 0s;
+  transition: all 0.3s ease-in-out 0s;
+}
+
+h2 > a:hover:before {
+  visibility: visible;
+  -webkit-transform: scaleX(1);
+  transform: scaleX(1);
+}
+

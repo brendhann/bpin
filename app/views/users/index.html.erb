@@ -1,0 +1,18 @@
+<center>
+<div class="user_show">
+<h1>Users</h1>
+
+
+<% @users = User.all %>
+<% @users.each do |user| %>
+  <div>
+  <p> <%= user.name %> </p>
+  <p class="round-image", align="center"><%= image_tag(user.avatar.url(:thumb)) %></p>
+  <p> <%= link_to user.email, user %><br/></p>
+  </div>
+  <p></p>
+  
+<% end %>
+
+</div>
+</center>

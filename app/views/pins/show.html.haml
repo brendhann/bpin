@@ -1,0 +1,38 @@
+#pin_show.row
+	.col-md-8.col-md-offset-2
+		.panel.panel-default
+			.panel-heading.pin_image
+				= image_tag @pin.image.url
+			.panel-body
+				%h1= @pin.title
+				%p.description= @pin.description
+				= @pin.created_at.strftime("%B %d, %Y")
+			.panel-footer
+				.row
+					.col-md-6
+						%p.user
+							Submitted by
+							= @pin.user.email
+							= social_share_button_tag(@pin.title)
+					.col-md-6
+						.btn-group.pull-right
+							= link_to like_pin_path(@pin), method: :put, class: "btn btn-default" do
+								%span.glyphicon.glyphicon-heart
+								= @pin.get_upvotes.size
+								
+							- if user_signed_in?
+								= link_to "Edit", edit_pin_path, class: "btn btn-default"
+								= link_to "Delete", pin_path, method: :delete, data: { confirm: "Are you sure?" }, class: "btn btn-default"
+
+			.panel-footer
+				<center>
+
+
+				- if user_signed_in?
+					= render :partial => @pin.comments
+					= simple_form_for [@pin, Comment.new]  do |f| 
+						= f.text_area :body, class: "form-control"
+						= f.submit "Add Comment", class: "btn btn-primary"
+
+				</center>
+ 
