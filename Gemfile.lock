@@ -41,7 +41,7 @@ GEM
     addressable (2.5.1)
       public_suffix (~> 2.0, >= 2.0.2)
     arel (6.0.4)
-    autoprefixer-rails (7.0.1)
+    autoprefixer-rails (7.1.0)
       execjs
     aws-sdk (2.9.17)
       aws-sdk-resources (= 2.9.17)
@@ -75,10 +75,10 @@ GEM
     debug_inspector (0.0.3)
     declarative (0.0.9)
     declarative-option (0.1.0)
-    devise (4.2.1)
+    devise (4.3.0)
       bcrypt (~> 3.0)
       orm_adapter (~> 0.1)
-      railties (>= 4.1.0, < 5.1)
+      railties (>= 4.1.0, < 5.2)
       responders
       warden (~> 1.2.3)
     erubis (2.7.0)
@@ -112,6 +112,18 @@ GEM
       signet (~> 0.7)
     haml (4.0.7)
       tilt
+    haml-rails (1.0.0)
+      actionpack (>= 4.0.1)
+      activesupport (>= 4.0.1)
+      haml (>= 4.0.6, < 6.0)
+      html2haml (>= 1.0.1)
+      railties (>= 4.0.1)
+    hpricot (0.8.6)
+    html2haml (2.2.0)
+      erubis (~> 2.7.0)
+      haml (>= 4.0, < 6)
+      nokogiri (>= 1.6.0)
+      ruby_parser (~> 3.5)
     httpclient (2.8.3)
     hurley (0.2)
     i18n (0.8.1)
@@ -229,6 +241,8 @@ GEM
       railties (>= 4.2.0, < 5.3)
     retriable (3.0.2)
     rmagick (2.14.0)
+    ruby_parser (3.9.0)
+      sexp_processor (~> 4.1)
     sass (3.4.23)
     sass-rails (5.0.6)
       railties (>= 4.0.0, < 6)
@@ -239,6 +253,7 @@ GEM
     sdoc (0.4.2)
       json (~> 1.7, >= 1.7.7)
       rdoc (~> 4.0)
+    sexp_processor (4.9.0)
     signet (0.7.3)
       addressable (~> 2.3)
       faraday (~> 0.9)
@@ -299,6 +314,8 @@ DEPENDENCIES
   execjs
   google_drive (~> 2.1, >= 2.1.2)
   haml (~> 4.0, >= 4.0.7)
+  haml-rails
+  hpricot
   jbuilder (~> 2.6, >= 2.6.1)
   jquery-rails
   masonry-rails (~> 0.2.4)
@@ -308,6 +325,7 @@ DEPENDENCIES
   rails (= 4.2.6)
   rails_12factor
   rails_admin (~> 1.1, >= 1.1.1)
+  ruby_parser
   sass-rails (~> 5.0)
   sdoc (~> 0.4.0)
   simple_form (~> 3.4)

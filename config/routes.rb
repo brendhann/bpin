@@ -1,7 +1,7 @@
 
             Rails.application.routes.draw do
   resources :comments
-  mount RailsAdmin::Engine => '/admin', as: 'rails_admin'
+            mount RailsAdmin::Engine => '/admin', as: 'rails_admin'
               match '/users',   to: 'users#index',   via: 'get'
               match '/users/:id',     to: 'users#show',       via: 'get'
               match '/memes/',        to: 'memes#index',      via: 'get'
@@ -11,20 +11,21 @@
              
 
 
-
-
-              
-
               devise_for :users, :path_prefix => 'd'
               resources  :pins do
 
                 member do
                   put "like",    to: "pins#upvote"
+                  put "dislike", to: "pins#downvote"
                 end
               resources :comments
               end
               
-              resources :users, :only =>[:show]
+              resources :users do
+                member do
+                  get :pins
+                end
+              end
 
               root "pins#index"
             end

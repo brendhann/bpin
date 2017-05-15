@@ -29,6 +29,13 @@ class CommentsController < ApplicationController
     end
   end
 
+
+
+
+
+
+
+
   private
     # Use callbacks to share common setup or constraints between actions.
     def set_comment
@@ -39,4 +46,4 @@ class CommentsController < ApplicationController
     def comment_params
       params.require(:comment).permit(:pin_id, :body, :user_id)
     end
-end
+end 

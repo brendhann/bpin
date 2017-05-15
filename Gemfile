@@ -44,7 +44,13 @@ gem 'acts_as_favorite', '~> 0.1.2'
 #
 gem 'social-share-button', '~> 0.8.8'
 #
-gem 'rails_admin', '~> 1.1', '>= 1.1.1'
+gem 'rails_admin', '~> 1.1', '>= 1.1.1'\
+
+gem "haml-rails"
+
+gem "hpricot"
+gem "ruby_parser"
+
 
 # gem 'rmagick', '~> 2.16'
 #

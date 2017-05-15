@@ -7,6 +7,10 @@
 				Submitted by
 				= pin.user.email
 			%p 
+				= link_to dislike_pin_path(pin), method: :put, class: "btn btn-default" do
+					%span.glyphicon.glyphicon-thumbs-down
+					= pin.get_downvotes.size
 				= pin.created_at.strftime("%B %d, %Y")
-
-		
+				= link_to like_pin_path(pin), method: :put, class: "btn btn-default" do
+					%span.glyphicon.glyphicon-thumbs-up
+					= pin.get_upvotes.size
