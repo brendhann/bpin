@@ -50,6 +50,7 @@ gem "haml-rails"
 
 gem "hpricot"
 gem "ruby_parser"
+gem 'omniauth-facebook', '~> 4.0'
 
 
 # gem 'rmagick', '~> 2.16'

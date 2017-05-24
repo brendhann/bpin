@@ -48,5 +48,7 @@ Rails.application.configure do
   Paperclip.options[:content_type_mappings] = { php: 'text/x-php' }
 
 
+  ENV['FACEBOOK_APP_ID'] = "251865275220225";
+  ENV['FACEBOOK_SECRET'] = "f3feb017090152e0d98eea62bd7003f2";
 
 end

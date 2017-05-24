@@ -8,10 +8,13 @@
               match '/memes/edit',        to: 'memes#edit',      via: 'get'
               match "/memes/edit",     to: 'memes#update',      via: 'post'
 
+
              
 
 
-              devise_for :users, :path_prefix => 'd'
+              devise_for :users, :path_prefix => 'd', controllers: { registrations: 'registrations', omniauth_callbacks: 'omniauth_callbacks' }
+              
+
               resources  :pins do
 
                 member do
