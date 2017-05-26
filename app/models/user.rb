@@ -3,7 +3,7 @@ class User < ActiveRecord::Base
 	  # :confirmable, :lockable, :timeoutable and :omniauthable
 	  devise :database_authenticatable, :registerable, :omniauthable, 
 	         :recoverable, :rememberable, :trackable, :validatable, :omniauth_providers => [:facebook]
-	  has_many :pins
+	  has_many :pins, dependent: :destroy
 	  
 	has_attached_file :avatar, :styles => { :medium => "300x300>", :thumb => "100x100#" }, 
 	 :default_url => "/images/:style/missing.png",  

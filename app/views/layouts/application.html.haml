@@ -26,7 +26,7 @@
 				%ul.nav.navbar-nav.navbar-invert
 					%li= link_to "Sign Up", new_user_registration_path
 					%li= link_to "Sign In", new_user_session_path
-					%h2.loginBtn.loginBtn--facebook= link_to "Login with FB", user_facebook_omniauth_authorize_path
+					%h2.loginBtn.loginBtn--facebook= link_to "Login with FB", user_facebook_omniauth_authorize_path, id: "sign_in"
 					%h2.loginBtn.loginBtn--google= link_to "Login with Google", root_path
 
 		</center>

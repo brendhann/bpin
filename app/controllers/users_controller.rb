@@ -1,7 +1,8 @@
 class UsersController < ApplicationController
   def show
   @user = User.find_by_id(params[:id])
-  @pins = @user.pins
+  @pins = @user.pins.order("created_at DESC")
+  
   end
 
   def pins
